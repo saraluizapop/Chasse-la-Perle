@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem; // Indispensable pour le New Input System
 
 public class PlayerShootAndAim : MonoBehaviour
 {
@@ -29,8 +30,8 @@ public class PlayerShootAndAim : MonoBehaviour
 
     void Update()
     {
-        // Déclenche le tir au clic gauche de la souris
-        if (Input.GetMouseButtonDown(0))
+        // Détection du clic gauche avec le New Input System
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             Tirer();
         }
@@ -47,7 +48,7 @@ public class PlayerShootAndAim : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(0, cameraRotation.eulerAngles.y, 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
-        // 3. Rétablit l'orientation du pivot pour ne pas casser la vue haut/bas
+        // 3. Rétablit l'orientation du pivot pour conserver le regard vertical
         playerCameraRoot.rotation = cameraRotation;
     }
 
@@ -64,7 +65,7 @@ public class PlayerShootAndAim : MonoBehaviour
             ? firePoint.position
             : transform.position + transform.forward * 1f + Vector3.up * 1f;
 
-        // La rotation du tir prend toute l'inclinaison de la caméra (vers le haut, le bas et l'avant)
+        // La rotation du tir prend toute l'orientation de la caméra (haut, bas, avant)
         Quaternion spawnRot = (playerCameraRoot != null) ? playerCameraRoot.rotation : transform.rotation;
 
         // Instancie le projectile magique
