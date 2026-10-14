@@ -38139,8 +38139,30 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 825894089210680117, guid: 680eea6d6021819489cbc49c0bd8dd99, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: 680eea6d6021819489cbc49c0bd8dd99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 60495387}
   m_SourcePrefab: {fileID: 100100000, guid: 680eea6d6021819489cbc49c0bd8dd99, type: 3}
+--- !u!1 &60495386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 680eea6d6021819489cbc49c0bd8dd99, type: 3}
+  m_PrefabInstance: {fileID: 60495385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &60495387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60495386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd54b5424f046b4396a34e0955d6b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterScroller
+  vitesseX: 0.05
+  vitesseY: 0.08
 --- !u!43 &74164230
 Mesh:
   m_ObjectHideFlags: 0
