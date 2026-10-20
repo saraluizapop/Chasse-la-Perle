@@ -683152,31 +683152,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 496253791}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalScale.x
-      value: 465.63614
+      value: 10.513687
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalScale.y
-      value: 465.63614
+      value: 10.513688
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalScale.z
-      value: 465.63614
+      value: 10.513687
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.22
+      value: 0.09663892
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.53
+      value: -0.16189282
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.71
+      value: -0.040596794
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
       propertyPath: m_LocalRotation.w
@@ -683225,8 +683225,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -1346369550762627069, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1004083073}
   m_SourcePrefab: {fileID: 100100000, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
+--- !u!4 &1004083071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
+  m_PrefabInstance: {fileID: 1004083070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1004083072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1346369550762627069, guid: 7ec073ee2585f7742960a5456e058676, type: 3}
+  m_PrefabInstance: {fileID: 1004083070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1004083073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004083072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd54b5424f046b4396a34e0955d6b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterScroller
+  vitesseX: 0.05
+  vitesseY: 0.08
 --- !u!1 &1006501254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346173,7 +1346200,7 @@ SceneRoots:
   - {fileID: 677580541}
   - {fileID: 1443308812}
   - {fileID: 60495385}
-  - {fileID: 1004083070}
+  - {fileID: 496253789}
   - {fileID: 947494842}
   - {fileID: 1113898420}
   - {fileID: 82129083}
