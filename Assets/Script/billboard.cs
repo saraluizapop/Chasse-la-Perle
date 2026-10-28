@@ -4,32 +4,56 @@ using TMPro;
 
 public class CatGuide : MonoBehaviour
 {
-    public GameObject speechBubble;
-    public TextMeshProUGUI speechText;
+    [Header("Éléments du HUD")]
+    [Tooltip("Le panneau complet de dialogue dans le Canvas HUD")]
+    public GameObject fenetreDialogueHUD;
+    [Tooltip("Le composant TextMeshPro à l'intérieur du panneau")]
+    public TextMeshProUGUI texteDialogueHUD;
 
-    private Coroutine currentCoroutine;
+    [Header("Paramètres d'affichage")]
+    [Tooltip("Vitesse d'apparition des lettres")]
+    public float vitesseEcriture = 0.03f;
+
+    private Coroutine coroutineDialogue;
 
     void Start()
     {
-        if (speechBubble != null) speechBubble.SetActive(false);
-    }
-
-    public void DonnerConseil(string message, float duree = 4f)
-    {
-        if (currentCoroutine != null) StopCoroutine(currentCoroutine);
-        currentCoroutine = StartCoroutine(ShowMessageRoutine(message, duree));
-    }
-
-    private IEnumerator ShowMessageRoutine(string message, float duree)
-    {
-        if (speechBubble != null && speechText != null)
+        // Masque la boîte de dialogue au lancement du jeu
+        if (fenetreDialogueHUD != null)
         {
-            speechText.text = message;
-            speechBubble.SetActive(true);
-
-            yield return new WaitForSeconds(duree);
-
-            speechBubble.SetActive(false);
+            fenetreDialogueHUD.SetActive(false);
         }
+    }
+
+    // Fonction appelée par tes zones (CatTriggerHint) ou événements
+    public void DonnerConseil(string message, float duree = 4.5f)
+    {
+        if (coroutineDialogue != null)
+        {
+            StopCoroutine(coroutineDialogue);
+        }
+        coroutineDialogue = StartCoroutine(AfficherDialogueRoutine(message, duree));
+    }
+
+    private IEnumerator AfficherDialogueRoutine(string message, float duree)
+    {
+        if (fenetreDialogueHUD == null || texteDialogueHUD == null) yield break;
+
+        // Active le panneau HUD
+        fenetreDialogueHUD.SetActive(true);
+        texteDialogueHUD.text = "";
+
+        // Effet machine à écrire
+        foreach (char lettre in message.ToCharArray())
+        {
+            texteDialogueHUD.text += lettre;
+            yield return new WaitForSeconds(vitesseEcriture);
+        }
+
+        // Temps de lecture
+        yield return new WaitForSeconds(duree);
+
+        // Masque le panneau une fois terminé
+        fenetreDialogueHUD.SetActive(false);
     }
 }
