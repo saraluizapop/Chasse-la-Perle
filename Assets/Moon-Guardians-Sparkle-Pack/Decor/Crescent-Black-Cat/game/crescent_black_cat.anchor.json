@@ -1,0 +1,51 @@
+{
+  "name": "Crescent Black Cat",
+  "id": "crescent_black_cat",
+  "frameWidth": 56,
+  "frameHeight": 48,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 12,
+      "durationsMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      28,
+      48
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      4,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      28,
+      16
+    ],
+    "radius": 36.4
+  },
+  "files": {
+    "on": "crescent_black_cat_on_strip.png"
+  }
+}

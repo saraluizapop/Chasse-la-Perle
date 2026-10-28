@@ -1,0 +1,59 @@
+{
+  "name": "Crescent Wand Strike",
+  "id": "crescent_wand_strike",
+  "frameWidth": 136,
+  "frameHeight": 80,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 20,
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      68,
+      80
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      9,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      68,
+      26
+    ],
+    "radius": 88.4
+  },
+  "files": {
+    "on": "crescent_wand_strike_on_strip.png"
+  }
+}

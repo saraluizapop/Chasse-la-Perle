@@ -1,0 +1,63 @@
+{
+  "name": "Sparkle Transformation",
+  "id": "sparkle_transformation",
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 24,
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      64,
+      128
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      8,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      64,
+      42
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "sparkle_transformation_on_strip.png"
+  }
+}

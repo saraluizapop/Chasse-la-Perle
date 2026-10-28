@@ -1,0 +1,64 @@
+{
+  "name": "Crystal Future City Skyline",
+  "id": "crystal_future_city_skyline",
+  "frameWidth": 168,
+  "frameHeight": 104,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        110
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      84,
+      104
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      11,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      84,
+      34
+    ],
+    "radius": 109.2
+  },
+  "files": {
+    "on": "crystal_future_city_skyline_on_strip.png",
+    "glow": "crystal_future_city_skyline_on_glow_strip.png",
+    "off": "crystal_future_city_skyline_off_strip.png"
+  }
+}

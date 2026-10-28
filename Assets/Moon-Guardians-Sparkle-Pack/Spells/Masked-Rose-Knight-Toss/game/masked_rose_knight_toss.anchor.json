@@ -1,0 +1,55 @@
+{
+  "name": "Masked Rose Knight Toss",
+  "id": "masked_rose_knight_toss",
+  "frameWidth": 136,
+  "frameHeight": 80,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      68,
+      80
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      9,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      68,
+      26
+    ],
+    "radius": 88.4
+  },
+  "files": {
+    "on": "masked_rose_knight_toss_on_strip.png"
+  }
+}

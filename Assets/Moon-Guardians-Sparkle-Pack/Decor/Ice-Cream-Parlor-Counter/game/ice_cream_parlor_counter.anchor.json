@@ -1,0 +1,51 @@
+{
+  "name": "Ice-Cream Parlor Counter",
+  "id": "ice_cream_parlor_counter",
+  "frameWidth": 104,
+  "frameHeight": 80,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 12,
+      "durationsMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      52,
+      80
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      7,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      52,
+      26
+    ],
+    "radius": 67.60000000000001
+  },
+  "files": {
+    "on": "ice_cream_parlor_counter_on_strip.png"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Love Chain Heart Beam",
+  "id": "love_chain_heart_beam",
+  "frameWidth": 136,
+  "frameHeight": 72,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      68,
+      72
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      9,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      68,
+      24
+    ],
+    "radius": 88.4
+  },
+  "files": {
+    "on": "love_chain_heart_beam_on_strip.png"
+  }
+}

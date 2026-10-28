@@ -1,0 +1,51 @@
+{
+  "name": "Guardian Ribbon Bunting",
+  "id": "guardian_ribbon_bunting",
+  "frameWidth": 136,
+  "frameHeight": 48,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 12,
+      "durationsMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      68,
+      48
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      9,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      68,
+      16
+    ],
+    "radius": 88.4
+  },
+  "files": {
+    "on": "guardian_ribbon_bunting_on_strip.png"
+  }
+}

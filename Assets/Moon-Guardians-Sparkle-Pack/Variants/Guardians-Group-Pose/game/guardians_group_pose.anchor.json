@@ -1,0 +1,55 @@
+{
+  "name": "Guardians Group Pose",
+  "id": "guardians_group_pose",
+  "frameWidth": 192,
+  "frameHeight": 104,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      96,
+      104
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      12,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      96,
+      34
+    ],
+    "radius": 124.80000000000001
+  },
+  "files": {
+    "on": "guardians_group_pose_on_strip.png"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Heart Compact Transformation",
+  "id": "heart_compact_transformation",
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 20,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      64,
+      128
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      8,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      64,
+      42
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "heart_compact_transformation_on_strip.png"
+  }
+}

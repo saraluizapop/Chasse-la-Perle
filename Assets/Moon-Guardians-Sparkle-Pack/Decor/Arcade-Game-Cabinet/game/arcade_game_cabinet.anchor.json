@@ -1,0 +1,64 @@
+{
+  "name": "Arcade Game Cabinet",
+  "id": "arcade_game_cabinet",
+  "frameWidth": 56,
+  "frameHeight": 88,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      28,
+      88
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      4,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      28,
+      29
+    ],
+    "radius": 57.2
+  },
+  "files": {
+    "on": "arcade_game_cabinet_on_strip.png",
+    "glow": "arcade_game_cabinet_on_glow_strip.png",
+    "off": "arcade_game_cabinet_off_strip.png"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Bubble Mist Veil",
+  "id": "bubble_mist_veil",
+  "frameWidth": 128,
+  "frameHeight": 96,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      64,
+      96
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      8,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      64,
+      32
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "bubble_mist_veil_on_strip.png"
+  }
+}

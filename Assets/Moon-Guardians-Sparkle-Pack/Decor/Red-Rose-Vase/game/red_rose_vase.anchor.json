@@ -1,0 +1,40 @@
+{
+  "name": "Red Rose Vase",
+  "id": "red_rose_vase",
+  "frameWidth": 40,
+  "frameHeight": 64,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      20,
+      64
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      3,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      20,
+      21
+    ],
+    "radius": 41.6
+  },
+  "files": {
+    "on": "red_rose_vase_on_strip.png"
+  }
+}

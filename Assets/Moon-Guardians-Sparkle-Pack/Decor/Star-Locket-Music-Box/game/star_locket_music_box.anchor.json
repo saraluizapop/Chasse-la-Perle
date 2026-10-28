@@ -1,0 +1,72 @@
+{
+  "name": "Star Locket Music Box",
+  "id": "star_locket_music_box",
+  "frameWidth": 64,
+  "frameHeight": 72,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 24,
+      "durationsMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        110
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      32,
+      72
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      4,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      32,
+      24
+    ],
+    "radius": 46.800000000000004
+  },
+  "files": {
+    "on": "star_locket_music_box_on_strip.png",
+    "glow": "star_locket_music_box_on_glow_strip.png",
+    "off": "star_locket_music_box_off_strip.png"
+  }
+}

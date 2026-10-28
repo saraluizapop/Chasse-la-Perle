@@ -1,0 +1,55 @@
+{
+  "name": "Winged Moon Horse",
+  "id": "winged_moon_horse",
+  "frameWidth": 112,
+  "frameHeight": 96,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      56,
+      96
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      7,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      56,
+      32
+    ],
+    "radius": 72.8
+  },
+  "files": {
+    "on": "winged_moon_horse_on_strip.png"
+  }
+}

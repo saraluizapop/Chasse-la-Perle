@@ -1,0 +1,40 @@
+{
+  "name": "Heart Cushion",
+  "id": "heart_cushion",
+  "frameWidth": 64,
+  "frameHeight": 56,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      32,
+      56
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      4,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      32,
+      18
+    ],
+    "radius": 41.6
+  },
+  "files": {
+    "on": "heart_cushion_on_strip.png"
+  }
+}

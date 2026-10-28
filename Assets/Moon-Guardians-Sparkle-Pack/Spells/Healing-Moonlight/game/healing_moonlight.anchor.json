@@ -1,0 +1,55 @@
+{
+  "name": "Healing Moonlight",
+  "id": "healing_moonlight",
+  "frameWidth": 96,
+  "frameHeight": 128,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      48,
+      128
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      6,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      48,
+      42
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "healing_moonlight_on_strip.png"
+  }
+}

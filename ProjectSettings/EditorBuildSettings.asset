@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/intro.unity
+    path: Assets/_/Scenes/intro.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Niv 1 et 2.unity
+    path: Assets/_/Scenes/Niv 1 et 2.unity
     guid: 74b367066b0138441bae49e95e9e86b3
   - enabled: 1
-    path: Assets/Scenes/Maison Solange.unity
+    path: Assets/_/Scenes/Maison Solange.unity
     guid: 3d939eeaec685d44f9f4b323aff4bfe9
   - enabled: 1
-    path: Assets/Scenes/Niveau 3.unity
+    path: Assets/_/Scenes/Niveau 3.unity
     guid: 1bb958dfc0d386645bfa9d62fb45b3f5
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

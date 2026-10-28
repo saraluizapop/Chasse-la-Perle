@@ -1,0 +1,55 @@
+{
+  "name": "Rose Petal Storm",
+  "id": "rose_petal_storm",
+  "frameWidth": 96,
+  "frameHeight": 96,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      48,
+      96
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      6,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      48,
+      32
+    ],
+    "radius": 62.400000000000006
+  },
+  "files": {
+    "on": "rose_petal_storm_on_strip.png"
+  }
+}

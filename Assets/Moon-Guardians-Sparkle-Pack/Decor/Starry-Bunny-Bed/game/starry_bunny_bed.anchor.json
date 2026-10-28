@@ -1,0 +1,40 @@
+{
+  "name": "Starry Bunny Bed",
+  "id": "starry_bunny_bed",
+  "frameWidth": 64,
+  "frameHeight": 104,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      32,
+      104
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      4,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      32,
+      34
+    ],
+    "radius": 67.60000000000001
+  },
+  "files": {
+    "on": "starry_bunny_bed_on_strip.png"
+  }
+}

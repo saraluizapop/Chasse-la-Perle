@@ -1,0 +1,55 @@
+{
+  "name": "Love Guardian",
+  "id": "love_guardian",
+  "frameWidth": 64,
+  "frameHeight": 80,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      32,
+      80
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      4,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      32,
+      26
+    ],
+    "radius": 52
+  },
+  "files": {
+    "on": "love_guardian_on_strip.png"
+  }
+}

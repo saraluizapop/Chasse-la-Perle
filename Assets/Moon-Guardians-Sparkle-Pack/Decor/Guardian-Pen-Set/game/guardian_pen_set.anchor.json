@@ -1,0 +1,58 @@
+{
+  "name": "Guardian Pen Set",
+  "id": "guardian_pen_set",
+  "frameWidth": 48,
+  "frameHeight": 64,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 10,
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        120
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      24,
+      64
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      3,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      24,
+      21
+    ],
+    "radius": 41.6
+  },
+  "files": {
+    "on": "guardian_pen_set_on_strip.png",
+    "glow": "guardian_pen_set_on_glow_strip.png",
+    "off": "guardian_pen_set_off_strip.png"
+  }
+}

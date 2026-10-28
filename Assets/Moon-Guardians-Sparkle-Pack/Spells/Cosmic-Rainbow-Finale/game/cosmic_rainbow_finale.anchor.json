@@ -1,0 +1,63 @@
+{
+  "name": "Cosmic Rainbow Finale",
+  "id": "cosmic_rainbow_finale",
+  "frameWidth": 160,
+  "frameHeight": 160,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 24,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      80,
+      160
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      10,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      80,
+      53
+    ],
+    "radius": 104
+  },
+  "files": {
+    "on": "cosmic_rainbow_finale_on_strip.png"
+  }
+}

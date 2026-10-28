@@ -1,0 +1,59 @@
+{
+  "name": "Crescent Feather Healing",
+  "id": "crescent_feather_healing",
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 20,
+      "durationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      64,
+      128
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      8,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      64,
+      42
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "crescent_feather_healing_on_strip.png"
+  }
+}

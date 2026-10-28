@@ -1,0 +1,64 @@
+{
+  "name": "Moon Crystal Palace",
+  "id": "moon_crystal_palace",
+  "frameWidth": 104,
+  "frameHeight": 120,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      52,
+      120
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      7,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      52,
+      40
+    ],
+    "radius": 78
+  },
+  "files": {
+    "on": "moon_crystal_palace_on_strip.png",
+    "glow": "moon_crystal_palace_on_glow_strip.png",
+    "off": "moon_crystal_palace_off_strip.png"
+  }
+}

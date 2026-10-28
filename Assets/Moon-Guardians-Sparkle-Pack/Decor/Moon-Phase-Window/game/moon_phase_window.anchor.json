@@ -1,0 +1,64 @@
+{
+  "name": "Moon-Phase Window",
+  "id": "moon_phase_window",
+  "frameWidth": 88,
+  "frameHeight": 88,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        140
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      44,
+      88
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      6,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      44,
+      29
+    ],
+    "radius": 57.2
+  },
+  "files": {
+    "on": "moon_phase_window_on_strip.png",
+    "glow": "moon_phase_window_on_glow_strip.png",
+    "off": "moon_phase_window_off_strip.png"
+  }
+}

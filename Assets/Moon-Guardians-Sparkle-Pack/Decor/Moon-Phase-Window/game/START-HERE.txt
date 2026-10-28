@@ -1,0 +1,5 @@
+THE PIXEL LOOM / LIVING DECOR / GAME EXPORT
+strips: every frame side by side, left to right, each 88 x 88 pixels. Frame times and the floor point (anchor) are in moon_phase_window.anchor.json.
+Hard edges: not applied (soft pixels are kept as drawn).
+
+The editable project is not in this bundle; keep the .pixel-loom-decor.json file you exported from.

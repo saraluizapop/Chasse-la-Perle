@@ -1,0 +1,55 @@
+{
+  "name": "Thunder Crash",
+  "id": "thunder_crash",
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      64,
+      128
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      8,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      64,
+      42
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "thunder_crash_on_strip.png"
+  }
+}

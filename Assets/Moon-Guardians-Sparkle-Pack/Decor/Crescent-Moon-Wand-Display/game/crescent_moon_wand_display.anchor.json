@@ -1,0 +1,60 @@
+{
+  "name": "Crescent Moon Wand Display",
+  "id": "crescent_moon_wand_display",
+  "frameWidth": 48,
+  "frameHeight": 88,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 12,
+      "durationsMs": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      24,
+      88
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      3,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      24,
+      29
+    ],
+    "radius": 57.2
+  },
+  "files": {
+    "on": "crescent_moon_wand_display_on_strip.png",
+    "glow": "crescent_moon_wand_display_on_glow_strip.png",
+    "off": "crescent_moon_wand_display_off_strip.png"
+  }
+}

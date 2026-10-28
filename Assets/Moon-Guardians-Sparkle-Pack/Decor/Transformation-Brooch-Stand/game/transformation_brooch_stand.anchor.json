@@ -1,0 +1,60 @@
+{
+  "name": "Transformation Brooch Stand",
+  "id": "transformation_brooch_stand",
+  "frameWidth": 48,
+  "frameHeight": 64,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 12,
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        90
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      24,
+      64
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      3,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      24,
+      21
+    ],
+    "radius": 41.6
+  },
+  "files": {
+    "on": "transformation_brooch_stand_on_strip.png",
+    "glow": "transformation_brooch_stand_on_glow_strip.png",
+    "off": "transformation_brooch_stand_off_strip.png"
+  }
+}

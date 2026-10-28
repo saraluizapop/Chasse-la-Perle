@@ -1,0 +1,60 @@
+{
+  "name": "Crescent Moon Lamp",
+  "id": "crescent_moon_lamp",
+  "frameWidth": 48,
+  "frameHeight": 72,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 12,
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120
+      ],
+      "loop": true
+    },
+    "off": {
+      "frames": 1,
+      "durationsMs": [
+        120
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      24,
+      72
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      3,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": true,
+    "color": "#80ffad",
+    "position": [
+      24,
+      24
+    ],
+    "radius": 46.800000000000004
+  },
+  "files": {
+    "on": "crescent_moon_lamp_on_strip.png",
+    "glow": "crescent_moon_lamp_on_glow_strip.png",
+    "off": "crescent_moon_lamp_off_strip.png"
+  }
+}

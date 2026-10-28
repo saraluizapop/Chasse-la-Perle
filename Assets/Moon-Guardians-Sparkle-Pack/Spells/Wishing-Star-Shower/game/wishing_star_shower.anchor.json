@@ -1,0 +1,55 @@
+{
+  "name": "Wishing Star Shower",
+  "id": "wishing_star_shower",
+  "frameWidth": 128,
+  "frameHeight": 96,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 16,
+      "durationsMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      64,
+      96
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      8,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      64,
+      32
+    ],
+    "radius": 83.2
+  },
+  "files": {
+    "on": "wishing_star_shower_on_strip.png"
+  }
+}

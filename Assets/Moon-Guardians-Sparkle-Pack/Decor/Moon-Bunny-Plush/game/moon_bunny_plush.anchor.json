@@ -1,0 +1,40 @@
+{
+  "name": "Moon Bunny Plush",
+  "id": "moon_bunny_plush",
+  "frameWidth": 40,
+  "frameHeight": 56,
+  "scale": 1,
+  "states": {
+    "on": {
+      "frames": 1,
+      "durationsMs": [
+        100
+      ],
+      "loop": true
+    }
+  },
+  "anchor": {
+    "pivot": [
+      20,
+      56
+    ],
+    "unit": "pixels from the top-left corner of one frame, at the exported scale",
+    "footprintTiles": [
+      3,
+      1
+    ],
+    "tileSize": 16
+  },
+  "light": {
+    "enabled": false,
+    "color": "#80ffad",
+    "position": [
+      20,
+      18
+    ],
+    "radius": 36.4
+  },
+  "files": {
+    "on": "moon_bunny_plush_on_strip.png"
+  }
+}
