@@ -1,26 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections;
-#pragma warning disable
 
-public class killParticle : MonoBehaviour 
+public class killParticle : MonoBehaviour
 {
-	ParticleEmitter pe;
-	public float lifespan;
-	float startTime;
+    private ParticleSystem ps;
 
-	// Use this for initialization
-	void Start () 
-	{
-		pe = GetComponent<ParticleEmitter>();
-		startTime = Time.fixedTime;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if((Time.fixedTime-startTime)> lifespan)
-		{
-			Destroy(gameObject);
-		}
-	}
+    void Start()
+    {
+        ps = GetComponent<ParticleSystem>();
+    }
+
+    void Update()
+    {
+        // Détruit l'objet dès que le ParticleSystem a fini d'émettre et est vide
+        if (ps != null && !ps.IsAlive())
+        {
+            Destroy(gameObject);
+        }
+    }
 }
