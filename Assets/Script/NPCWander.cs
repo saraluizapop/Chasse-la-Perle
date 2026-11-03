@@ -5,59 +5,50 @@ using UnityEngine.AI;
 public class NPCWander : MonoBehaviour
 {
     [Header("Paramètres d'errance")]
-    public float wanderRadius = 6f;      // Rayon adapté à ta dalle
-    public float wanderTimer = 3f;       // Change de cible toutes les 3s
+    public float wanderRadius = 7f;      // Rayon de recherche de la destination
+    public float wanderTimer = 4f;       // Temps d'attente avant de choisir un nouveau point
 
     [Header("Animation")]
     public Animator animator;
-    public string walkParameter = "run"; // Assure-toi que c'est "run" ou "walking" selon ton Animator
+    public string walkParameter = "walking"; // Doit être identique au nom dans l'Animator
 
     private NavMeshAgent agent;
     private float timer;
 
-    void Start()
+    void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
-        if (animator == null) animator = GetComponent<Animator>();
-
         timer = wanderTimer;
-        ChoisirNouvelleDestination();
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
+        // Quand le timer expire, on cherche un nouveau point sur le NavMesh
         if (timer >= wanderTimer)
         {
-            ChoisirNouvelleDestination();
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            agent.SetDestination(newPos);
             timer = 0;
         }
 
-        // Vérifie si l'agent bouge réellement
-        bool isMoving = agent.velocity.sqrMagnitude > 0.05f;
-
+        // Met à jour l'animation : marche si l'agent avance et n'est pas arrivé
         if (animator != null)
         {
+            bool isMoving = agent.hasPath && agent.remainingDistance > agent.stoppingDistance;
             animator.SetBool(walkParameter, isMoving);
         }
     }
 
-    void ChoisirNouvelleDestination()
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
     {
-        Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
-        randomDirection += transform.position;
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+        randDirection += origin;
 
-        NavMeshHit hit;
-        // Cherche un point valide sur le NavMesh à proximité
-        if (NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, NavMesh.AllAreas))
-        {
-            agent.SetDestination(hit.position);
-            Debug.Log("Lapin : Nouvelle destination vers " + hit.position);
-        }
-        else
-        {
-            Debug.LogWarning("Lapin : Impossible de trouver un point sur le NavMesh ! Le lapin est-il bien sur la zone bleue ?");
-        }
+        NavMeshHit navHit;
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+        return navHit.position;
     }
 }
