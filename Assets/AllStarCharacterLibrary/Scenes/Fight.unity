@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 52d4efdf6488bbc40ba92879ef2628af, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 38bcd3a211b2f5f49bbdef8cb6a750b3, type: 2}
 --- !u!196 &5
 NavMeshSettings:
@@ -1472,8 +1472,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   stats: {fileID: 0}
   targeted: 0
-  hitReport: {fileID: 427970, guid: 309bce038b37ec54cbdb9131a0fc56a5, type: 2}
-  particleHit: {fileID: 444362, guid: b10d17f93a8f6424abd7db0cddbfdf2e, type: 2}
+  hitReport: {fileID: 427970, guid: 309bce038b37ec54cbdb9131a0fc56a5, type: 3}
+  particleHit: {fileID: 444362, guid: b10d17f93a8f6424abd7db0cddbfdf2e, type: 3}
   WeaponState: 1
   attacking: 0
   attackPos: {x: 0, y: 0, z: 0}
@@ -1809,8 +1809,8 @@ MonoBehaviour:
   destFloor: {fileID: 0}
   clickedFloor: {fileID: 0}
   attackPlane: {fileID: 1664729158}
-  hitReport: {fileID: 427970, guid: 309bce038b37ec54cbdb9131a0fc56a5, type: 2}
-  particleHit: {fileID: 444362, guid: b10d17f93a8f6424abd7db0cddbfdf2e, type: 2}
+  hitReport: {fileID: 427970, guid: 309bce038b37ec54cbdb9131a0fc56a5, type: 3}
+  particleHit: {fileID: 444362, guid: b10d17f93a8f6424abd7db0cddbfdf2e, type: 3}
   hitCheck: 0
   rightButtonDown: 0
   wasAttacking: 0
@@ -2290,6 +2290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066894176}
   - component: {fileID: 2066894175}
+  - component: {fileID: 2066894177}
   m_Layer: 0
   m_Name: Directional light
   m_TagString: Untagged
@@ -2377,6 +2378,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066894177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066894174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
