@@ -42229,11 +42229,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00010806322
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.653152
+      value: 32.9
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42499,11 +42499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00015687943
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.570667
+      value: 52.8
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -294833,7 +294833,7 @@ Transform:
   m_GameObject: {fileID: 258417391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66.54, y: 0.24, z: 48.83}
+  m_LocalPosition: {x: -65.81, y: 0.64, z: 48.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -814406,7 +814406,9 @@ GameObject:
   - component: {fileID: 1120089339}
   - component: {fileID: 1120089338}
   - component: {fileID: 1120089337}
-  - component: {fileID: 1120089336}
+  - component: {fileID: 1120089342}
+  - component: {fileID: 1120089341}
+  - component: {fileID: 1120089340}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -814414,29 +814416,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1120089336
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120089335}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1120089337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -814509,6 +814488,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2092251699}
   m_LocalEulerAnglesHint: {x: 0, y: 33.622, z: 0}
+--- !u!114 &1120089340
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120089335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873a92953f85f46ff828089ce0e82b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.TransformAction
+  targetMode: 1
+  target: {fileID: 978228206}
+  modifyPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  modifyRotation: 0
+  rotation: {x: 0, y: 0, z: 0}
+  modifyScale: 0
+  scale: {x: 1, y: 1, z: 1}
+  valueMode: 0
+  valueSource: 0
+  valueReference: {fileID: 0}
+  space: 0
+  cancelPhysicsWhileMoving: 1
+  animate: 0
+  duration: 1
+  ease: 0
+  customCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1120089341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120089335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a92f28de6ef04b69ab05194dfd044ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ColliderEvent
+  conditions: []
+  actions:
+  - {fileID: 1120089340}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
+  requiredTags:
+  - Player
+  debugColor: {r: 1, g: 0.4, b: 0, a: 0.3}
+--- !u!64 &1120089342
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120089335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &1120165345
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -860686,11 +860765,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00010192394
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.39488
+      value: 32.6
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1331349,7 +1331428,7 @@ Transform:
   m_GameObject: {fileID: 2000905460}
   serializedVersion: 2
   m_LocalRotation: {x: -3.6983112e-14, y: -0, z: 4.3167394e-14, w: 1}
-  m_LocalPosition: {x: -2.97, y: -0.94, z: -11.33}
+  m_LocalPosition: {x: -2.915, y: -0.786, z: -10.975}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1411460,11 +1411539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00014138222
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.064882
+      value: 27.3
       objectReference: {fileID: 0}
     - target: {fileID: 8192794293469578051, guid: 2bf23adb23f0ef248904f7e90457f0ff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1416797,8 +1416876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
-  SprintSpeed: 5.335
+  MoveSpeed: 7.63
+  SprintSpeed: 13.44
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
   LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
@@ -1416871,6 +1416950,7 @@ GameObject:
   - component: {fileID: 1300963667036311539}
   - component: {fileID: 3360719564055073667}
   - component: {fileID: 8288964016290190161}
+  - component: {fileID: 8288964016290190162}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -1418927,6 +1419007,20 @@ MonoBehaviour:
   hauteursSauts:
   - 4
   - 3
+--- !u!114 &8288964016290190162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360719564055073679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a00f988091a154689d08f97689fbd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventaire
+  gemCount: 3
+  compteurTexte: {fileID: 0}
 --- !u!1 &8294459902673658615
 GameObject:
   m_ObjectHideFlags: 0
