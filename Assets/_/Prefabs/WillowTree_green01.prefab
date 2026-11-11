@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.9
+      value: 73.69898
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.80129343
+      value: 0.0009015173
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.7
+      value: -35.751
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 5.8898987e-19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7308326040803339093, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 333733ceb992ddb448188a2f476222e8, type: 2}
+    - target: {fileID: -7308326040803339093, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6baca70dc3434ed41acb5be62febe897, type: 2}
     - target: {fileID: -5283256787836253263, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -60,6 +68,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WillowTree_green01
       objectReference: {fileID: 0}
+    - target: {fileID: 2453279592870119383, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 333733ceb992ddb448188a2f476222e8, type: 2}
+    - target: {fileID: 2453279592870119383, guid: a95a6195a5c9f094a8e6c9be8110396d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6baca70dc3434ed41acb5be62febe897, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

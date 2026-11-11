@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.758661
+      value: 6.1688805
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7999469
+      value: -0.0004345798
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.67
+      value: -74.23304
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 5.8898987e-19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,6 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8565770898386568673, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 18fcf51a9ce28ac43bbcf1c40e8b314f, type: 2}
+    - target: {fileID: -8565770898386568673, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ecd861594bee2442b3935d67fa518f0, type: 2}
+    - target: {fileID: -4677612639587749470, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 18fcf51a9ce28ac43bbcf1c40e8b314f, type: 2}
+    - target: {fileID: -4677612639587749470, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ecd861594bee2442b3935d67fa518f0, type: 2}
     - target: {fileID: -3711176315312267664, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -58,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8ecd861594bee2442b3935d67fa518f0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6534b6c411f3fa640b49696bbb969c99, type: 3}
       propertyPath: m_Name
-      value: BroadleafTree_02
+      value: BroadleafTree_blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

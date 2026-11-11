@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.41
+      value: 7.791176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.80121404
+      value: 0.0008596349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.33
+      value: -64.02547
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 5.8898987e-19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -56,10 +56,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: d235d21210cd9c341a773bb97a0a4ad4, type: 2}
+    - target: {fileID: -3771075064204271452, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 18fcf51a9ce28ac43bbcf1c40e8b314f, type: 2}
+    - target: {fileID: -3771075064204271452, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d235d21210cd9c341a773bb97a0a4ad4, type: 2}
     - target: {fileID: 919132149155446097, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
       propertyPath: m_Name
-      value: BroadleafTree_01
+      value: BroadleafTree_green
       objectReference: {fileID: 0}
+    - target: {fileID: 1408871879080554372, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 18fcf51a9ce28ac43bbcf1c40e8b314f, type: 2}
+    - target: {fileID: 1408871879080554372, guid: c622c7f70285dec418f3c2a80a5e6b1e, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d235d21210cd9c341a773bb97a0a4ad4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

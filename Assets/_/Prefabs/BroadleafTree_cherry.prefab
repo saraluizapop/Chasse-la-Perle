@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.264585
+      value: 7.0788746
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8003098
+      value: -0.00010221966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.286045
+      value: -41.384117
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 5.8898987e-19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6238598490729814387, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b87e06c04499a548b061cebc9c25c0d, type: 2}
+    - target: {fileID: -6238598490729814387, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a2776aad3b57804994baf2fcd717291, type: 2}
     - target: {fileID: -1431185132973157516, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -58,8 +66,16 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1b87e06c04499a548b061cebc9c25c0d, type: 2}
     - target: {fileID: 919132149155446097, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
       propertyPath: m_Name
-      value: BroadleafTree_05
+      value: BroadleafTree_cherry
       objectReference: {fileID: 0}
+    - target: {fileID: 9035751160322540018, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a2776aad3b57804994baf2fcd717291, type: 2}
+    - target: {fileID: 9035751160322540018, guid: 6eec6498e845dc5498351cd289f44949, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b87e06c04499a548b061cebc9c25c0d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

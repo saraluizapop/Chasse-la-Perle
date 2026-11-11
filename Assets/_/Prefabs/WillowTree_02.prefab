@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.629333
+      value: 46.945274
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8002
+      value: -0.000072300216
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.112497
+      value: -22.146225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 5.8898987e-19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,10 +48,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -967471130843039232, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 333733ceb992ddb448188a2f476222e8, type: 2}
+    - target: {fileID: -967471130843039232, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6baca70dc3434ed41acb5be62febe897, type: 2}
     - target: {fileID: 919132149155446097, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: m_Name
       value: WillowTree_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1453787573786363424, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6baca70dc3434ed41acb5be62febe897, type: 2}
+    - target: {fileID: 1453787573786363424, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 333733ceb992ddb448188a2f476222e8, type: 2}
     - target: {fileID: 8191675367873093284, guid: 290c1de21dde0be42ad0fee255ef8a88, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
