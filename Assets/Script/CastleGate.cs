@@ -1,0 +1,44 @@
+using UnityEngine;
+
+public class CastleGateManager : MonoBehaviour
+{
+    [Header("Configuration")]
+    public int ennemisRequis = 4;
+
+    [Header("Accès au Château")]
+    [Tooltip("La porte, grille ou barrière magique qui bloque l'entrée du château")]
+    public GameObject porteChateau;
+
+    private int ennemisTues = 0;
+
+    public void EnnemiElimine()
+    {
+        ennemisTues++;
+        Debug.Log("Ennemis vaincus : " + ennemisTues + " / " + ennemisRequis);
+
+        CatGuide chat = FindFirstObjectByType<CatGuide>();
+        if (chat != null && ennemisTues < ennemisRequis)
+        {
+            chat.DonnerConseil("Encore " + (ennemisRequis - ennemisTues) + " ennemi(s) avant le château !");
+        }
+
+        if (ennemisTues >= ennemisRequis)
+        {
+            OuvrirChateau();
+        }
+    }
+
+    void OuvrirChateau()
+    {
+        if (porteChateau != null)
+        {
+            porteChateau.SetActive(false); // Ouvre le passage vers le château !
+        }
+
+        CatGuide chat = FindFirstObjectByType<CatGuide>();
+        if (chat != null)
+        {
+            chat.DonnerConseil("La voie est libre ! Entrons dans le château sauver Perle !");
+        }
+    }
+}
