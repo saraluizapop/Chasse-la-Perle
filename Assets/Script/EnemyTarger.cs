@@ -14,14 +14,23 @@ public class EnemyTarget : MonoBehaviour
         }
     }
 
-    void Mourir()
+    private void Mourir()
     {
-        CastleGateManager gestionnaire = FindFirstObjectByType<CastleGateManager>();
-        if (gestionnaire != null)
+        // 1. Préviens le gestionnaire de la porte extérieure (s'il est actif)
+        CastleGateManager gateManager = Object.FindAnyObjectByType<CastleGateManager>();
+        if (gateManager != null && gateManager.gameObject.activeInHierarchy)
         {
-            gestionnaire.EnnemiElimine();
+            gateManager.EnnemiElimine();
         }
 
+        // 2. Préviens le gestionnaire de la cage intérieure (s'il est actif)
+        ArenaManager arena = Object.FindAnyObjectByType<ArenaManager>();
+        if (arena != null && arena.gameObject.activeInHierarchy)
+        {
+            arena.MonstreMort();
+        }
+
+        // 3. Particules de mort
         if (particulesMort != null)
         {
             Instantiate(particulesMort, transform.position, Quaternion.identity);
