@@ -16,6 +16,12 @@ public class StatueExchange : MonoBehaviour
     [Tooltip("Délai d'attente entre l'apparition de chaque nénuphar")]
     public float delayBetweenLilypads = 0.25f;
 
+    [Header("Son d'apparition")]
+    public AudioSource audioSource;
+    public AudioClip sonApparitionNenuphar;
+    [Range(0f, 1f)]
+    public float volumeSon = 0.8f;
+
     private bool hasExchanged = false;
 
     private void OnTriggerEnter(Collider other)
@@ -37,10 +43,8 @@ public class StatueExchange : MonoBehaviour
                     inventory.gemCount -= requiredGems;
                     hasExchanged = true;
 
-                    // Lance l'animation progressive
+                    // Lance l'animation progressive avec son
                     StartCoroutine(ApparitionProgressive());
-
-                    Debug.Log("Échange réussi : les nénuphars grandissent un par un !");
                 }
                 else
                 {
@@ -55,11 +59,9 @@ public class StatueExchange : MonoBehaviour
     {
         if (missingLilypadsGroup == null) yield break;
 
-        // 1. Récupère tous les nénuphars enfants du groupe
         Transform parentTransform = missingLilypadsGroup.transform;
         int count = parentTransform.childCount;
 
-        // Stocke leur taille d'origine et réduit-les à 0 au départ
         Vector3[] originalScales = new Vector3[count];
         for (int i = 0; i < count; i++)
         {
@@ -68,30 +70,36 @@ public class StatueExchange : MonoBehaviour
             child.localScale = Vector3.zero;
         }
 
-        // 2. Active l'objet parent
         missingLilypadsGroup.SetActive(true);
 
-        // 3. Fait grandir chaque nénuphar l'un après l'autre
         for (int i = 0; i < count; i++)
         {
             Transform child = parentTransform.GetChild(i);
             Vector3 targetScale = originalScales[i];
+
+            // Joue le bruit juste au moment où ce nénuphar commence à apparaître
+            if (audioSource != null && sonApparitionNenuphar != null)
+            {
+                // Optionnel : fait monter légèrement le pitch (la note) à chaque nénuphar (1.0 -> 1.3)
+                audioSource.pitch = 1.0f + (i * 0.06f);
+                audioSource.PlayOneShot(sonApparitionNenuphar, volumeSon);
+            }
 
             float timer = 0f;
             while (timer < growDuration)
             {
                 timer += Time.deltaTime;
                 float progress = Mathf.Clamp01(timer / growDuration);
-
-                // Effet d'interpolation fluide
                 child.localScale = Vector3.Lerp(Vector3.zero, targetScale, Mathf.SmoothStep(0f, 1f, progress));
                 yield return null;
             }
 
             child.localScale = targetScale;
 
-            // Petit temps d'attente avant que le prochain ne pousse
             yield return new WaitForSeconds(delayBetweenLilypads);
         }
+
+        // Remet le pitch normal à la fin
+        if (audioSource != null) audioSource.pitch = 1.0f;
     }
 }
