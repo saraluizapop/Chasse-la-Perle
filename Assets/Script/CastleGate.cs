@@ -9,6 +9,12 @@ public class CastleGateManager : MonoBehaviour
     [Tooltip("La porte, grille ou barrière magique qui bloque l'entrée du château")]
     public GameObject porteChateau;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sonOuverturePorte;
+    [Range(0f, 1f)]
+    public float volumeSon = 1f;
+
     private int ennemisTues = 0;
 
     public void EnnemiElimine()
@@ -33,6 +39,12 @@ public class CastleGateManager : MonoBehaviour
         if (porteChateau != null)
         {
             porteChateau.SetActive(false); // Ouvre le passage vers le château !
+        }
+
+        // Joue le bruit d'ouverture de la grille du château
+        if (audioSource != null && sonOuverturePorte != null)
+        {
+            audioSource.PlayOneShot(sonOuverturePorte, volumeSon);
         }
 
         CatGuide chat = FindFirstObjectByType<CatGuide>();
