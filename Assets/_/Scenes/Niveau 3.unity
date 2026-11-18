@@ -190768,7 +190768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f247ad078a38435b9e19cb43acc693d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.AudioAction
-  target: {fileID: 0}
+  target: {fileID: 704045521}
   operation: 0
 --- !u!1001 &1933250217
 PrefabInstance:
@@ -191997,15 +191997,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d4012f79e8e98b34eba200c8c44efcc1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.96404046
+      value: 0.66409856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4012f79e8e98b34eba200c8c44efcc1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.96404046
+      value: 0.66409856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4012f79e8e98b34eba200c8c44efcc1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.96404046
+      value: 0.66409856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4012f79e8e98b34eba200c8c44efcc1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -192013,7 +192013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4012f79e8e98b34eba200c8c44efcc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.39
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4012f79e8e98b34eba200c8c44efcc1, type: 3}
       propertyPath: m_LocalPosition.z
