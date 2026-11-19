@@ -28,13 +28,13 @@ public class Game : MonoBehaviour
 	public MouseOrbit			mouseCam;
 	public bool					settingAngle;
 
-
-	void Start()
+    [Obsolete]
+    void Start()
 	{
 		allZones = FindObjectsOfType(typeof(Zone)) as Zone[];
 		enemies = FindObjectsOfType(typeof(EnemyController)) as EnemyController[];
 		envTargets = FindObjectsOfType(typeof(EnvTarget)) as EnvTarget[];
-		abc = Transform.FindObjectOfType(typeof(ASCLBasicController)) as ASCLBasicController;
+        abc = Transform.FindObjectOfType(typeof(ASCLBasicController)) as ASCLBasicController;
 		player = abc.transform;
 		mouseCam = Camera.main.GetComponentInChildren<MouseOrbit>();
 
@@ -186,8 +186,12 @@ public class Game : MonoBehaviour
 		{
 			if(enemies[i].playerSighted)
 			{
-				if(enemies[i].playerDistance<enemies[i].visualRange);
-				{
+                if (enemies[i].playerDistance < enemies[i].visualRange)
+                {
+                    ;
+                }
+
+                {
 					eBary+=enemies[i].transform.position;
 					eCount+=1;
 				}

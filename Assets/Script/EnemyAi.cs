@@ -41,26 +41,33 @@ public class EnemyAI : MonoBehaviour
 
             if (distance <= porteeAttaque)
             {
-                if (animator != null) animator.SetBool("isWalking", false);
+                if (animator != null) animator.SetBool("walking", false);
 
                 if (Time.time >= prochainCoupTemps)
-                {
-                    AttaquerJoueur();
-                    prochainCoupTemps = Time.time + tempsEntreAttaques;
-                }
+                    NewAttack();
             }
             else
             {
-                if (animator != null) animator.SetBool("isWalking", true);
+                if (animator != null) animator.SetBool("walking", true);
                 transform.position += transform.forward * vitesseCourse * Time.deltaTime;
             }
         }
-        else
-        {
-            if (animator != null) animator.SetBool("isWalking", false);
-        }
+        
     }
 
+    private void NewAttack()
+    {
+        LancerAttaque();
+    }
+
+    [System.Obsolete]
+    private void LancerAttaque()
+    {
+        AttaquerJoueur();
+        prochainCoupTemps = Time.time + tempsEntreAttaques;
+    }
+
+    [System.Obsolete]
     private void AttaquerJoueur()
     {
         if (animator != null)

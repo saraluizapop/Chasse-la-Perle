@@ -21,6 +21,7 @@ public class PerleVictoire : MonoBehaviour
 
     private bool victoireDeclenchee = false;
 
+    [System.Obsolete]
     private void OnTriggerEnter(Collider other)
     {
         if (victoireDeclenchee) return;
@@ -31,14 +32,16 @@ public class PerleVictoire : MonoBehaviour
         if (other.CompareTag("Player") || other.transform.root.CompareTag("Player"))
         {
             victoireDeclenchee = true;
-            StartCoroutine(DeclencherVictoire());
+            Coroutine DeclencherVictoireCoroutine = StartCoroutine(DeclencherVictoire());
         }
     }
 
+    [System.Obsolete]
     private IEnumerator DeclencherVictoire()
     {
         // 1. Petit message final du chat compagnon
-        CatGuide chat = FindFirstObjectByType<CatGuide>();
+        var chatGuide = FindFirstObjectByType<CatGuide>();
+        CatGuide chat = chatGuide;
         if (chat != null)
         {
             chat.DonnerConseil("Perle ! Tu es saine et sauve !");

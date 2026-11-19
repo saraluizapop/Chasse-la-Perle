@@ -17,12 +17,14 @@ public class CastleGateManager : MonoBehaviour
 
     private int ennemisTues = 0;
 
+    [System.Obsolete]
     public void EnnemiElimine()
     {
         ennemisTues++;
         Debug.Log("Ennemis vaincus : " + ennemisTues + " / " + ennemisRequis);
 
-        CatGuide chat = FindFirstObjectByType<CatGuide>();
+        CatGuide catGuide = FindFirstObjectByType<CatGuide>();
+        CatGuide chat = catGuide;
         if (chat != null && ennemisTues < ennemisRequis)
         {
             chat.DonnerConseil("Encore " + (ennemisRequis - ennemisTues) + " Échos avant le château !");
@@ -34,6 +36,7 @@ public class CastleGateManager : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     void OuvrirChateau()
     {
         if (porteChateau != null)

@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     public void SubirDegats(int quantite)
     {
         if (estInvulnerable || vieActuelle <= 0) return;
@@ -51,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // 2. Conseil du chat compagnon
-        CatGuide guide = FindFirstObjectByType<CatGuide>();
+        CatGuide guide = FindAnyObjectByType<CatGuide>();
         if (guide != null)
         {
             if (vieActuelle > 0)

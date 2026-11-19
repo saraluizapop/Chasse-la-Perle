@@ -36,6 +36,7 @@ public class StatueExchange : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     private void OnTriggerEnter(Collider other)
     {
         if (dejaActivee) return;
@@ -53,7 +54,8 @@ public class StatueExchange : MonoBehaviour
                 }
                 else
                 {
-                    CatGuide chat = FindFirstObjectByType<CatGuide>();
+                    CatGuide chatGuide = FindFirstObjectByType<CatGuide>();
+                    CatGuide chat = chatGuide;
                     if (chat != null)
                     {
                         int manquantes = gemmesRequises - inventaire.gemCount;
@@ -81,13 +83,12 @@ public class StatueExchange : MonoBehaviour
 
         StartCoroutine(FaireApparaitreGroupe());
 
-        CatGuide chat = FindFirstObjectByType<CatGuide>();
+        CatGuide chat = FindAnyObjectByType<CatGuide>();
         if (chat != null && messagesStatueActivee != null && messagesStatueActivee.Length > 0)
         {
             chat.DonnerSequenceConseils(messagesStatueActivee);
         }
     }
-
     private IEnumerator FaireApparaitreGroupe()
     {
         if (pontNenuphars == null) yield break;

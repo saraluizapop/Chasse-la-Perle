@@ -64,34 +64,7 @@ namespace ithappy.Animals_FREE
             m_Animation = new AnimationHandler(m_Animator, m_VerticalID, m_StateID);
         }
 
-        private void Update()
-        {
-            m_Movement.Move(Time.deltaTime, in m_Axis, in m_Target, m_IsRun, m_IsMoving, out var animAxis, out var isAir);
-            m_Animation.Animate(in animAxis, m_IsRun ? 1f : 0f, Time.deltaTime);
-        }
-
-        private void OnAnimatorIK()
-        {
-            m_Animation.AnimateIK(in m_Target, m_LookWeight);
-        }
-
-        public void SetInput(in Vector2 axis, in Vector3 target, in bool isRun, in bool isJump)
-        {
-            m_Axis = axis;
-            m_Target = target;
-            m_IsRun = isRun;
-
-            if (m_Axis.sqrMagnitude < Mathf.Epsilon)
-            {
-                m_Axis = Vector2.zero;
-                m_IsMoving = false;
-            }
-            else
-            {
-                m_Axis = Vector3.ClampMagnitude(m_Axis, 1f);
-                m_IsMoving = true;
-            }
-        }
+      
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
@@ -177,7 +150,10 @@ namespace ithappy.Animals_FREE
                     m_LastForward = Vector3.Normalize(movement);
                 }
 
-                CaculateGravity(deltaTime, out isAir);
+                bool air;
+                CaculateGravity(deltaTime, out air);
+                isAir = air; // Correction : assigner la valeur retournée à l'argument out
+
                 Displace(deltaTime, in movement, isRun);
                 Turn(in targetForward, isMoving);
                 UpdateRotation(deltaTime);

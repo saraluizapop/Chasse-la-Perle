@@ -50,11 +50,13 @@ namespace IdyllicFantasyNature
                     // activates the animator to play the animation
                     _animator.enabled = true;
                     // resets the cooldown for the respawn
-                    _cooldown = Random.Range(_area.MinCooldown, _area.MaxCooldown);
+                    
+                    
                     // makes the butterfly visible
                     _butterflyChild.SetActive(true);
                     // determines a random position for the butterfly in the spawn area
-                    transform.position = new Vector3(Random.Range(_area.Collider.bounds.min.x, _area.Collider.bounds.max.x), Random.Range(_area.Collider.bounds.min.y, _area.Collider.bounds.max.y), Random.Range(_area.Collider.bounds.min.z, _area.Collider.bounds.max.z));
+                    Vector3 vector3 = new(Random.Range(_area.Collider.bounds.min.x, _area.Collider.bounds.max.x), Random.Range(_area.Collider.bounds.min.y, _area.Collider.bounds.max.y), Random.Range(_area.Collider.bounds.min.z, _area.Collider.bounds.max.z));
+                    transform.position = vector3;
 
                     _isPlaying = true;
 
