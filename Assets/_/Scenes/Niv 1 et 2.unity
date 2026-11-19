@@ -820206,7 +820206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.SceneAction
   operation: 0
   sceneAsset: {fileID: 102900000, guid: 3d939eeaec685d44f9f4b323aff4bfe9, type: 3}
-  scenePath: Assets/_/Scenes/Maison Solange.unity
+  scenePath: Assets/_/Scenes/SceneVictoire.unity
   additive: 0
 --- !u!4 &1562683882 stripped
 Transform:
@@ -884262,7 +884262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1795222578
 Transform:
   m_ObjectHideFlags: 0
@@ -1298450,6 +1298450,10 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 2731569580677073205}
+    - target: {fileID: 2704627358532058868, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.085
+      objectReference: {fileID: 0}
     - target: {fileID: 3375736549312346483, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
       propertyPath: m_Height
       value: 0.64
@@ -1299611,7 +1299615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5534378689886480631
 GameObject:
   m_ObjectHideFlags: 0
