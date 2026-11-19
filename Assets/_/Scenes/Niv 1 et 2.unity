@@ -529771,7 +529771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5b101f7a4480e43869b1cd6c832165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortalAltar
-  gemmesRequises: 6
+  gemmesRequises: 3
   nomSceneFinale: Niveau 3
   vortexVisuel: {fileID: 347275848}
   activationParticles: {fileID: 2123891905}
@@ -1298450,6 +1298450,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 2731569580677073205}
+    - target: {fileID: 3375736549312346483, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
+      propertyPath: m_Height
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375736549312346483, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
+      propertyPath: m_Center.y
+      value: 0.29
+      objectReference: {fileID: 0}
     - target: {fileID: 4451851171864589177, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
       propertyPath: texteDialogueHUD
       value: 
@@ -1298468,7 +1298476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5276148182002928641, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.256211
+      value: 3.292
       objectReference: {fileID: 0}
     - target: {fileID: 5276148182002928641, guid: 8e1e13f9bcd79884188421ba6507d359, type: 3}
       propertyPath: m_LocalPosition.z

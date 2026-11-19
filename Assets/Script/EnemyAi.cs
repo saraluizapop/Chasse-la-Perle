@@ -6,11 +6,8 @@ public class EnemyAI : MonoBehaviour
     public float porteeDetection = 12f;
     public float vitesseCourse = 3.5f;
     public float porteeAttaque = 1.6f;
+    public int degats = 1;
     public float tempsEntreAttaques = 1.5f;
-
-    [Header("Défaite (Optionnel)")]
-    [Tooltip("Glisse ton écran de défaite ici si tu veux qu'un coup fasse perdre le joueur")]
-    public GameObject ecranDefaiteUI;
 
     private Transform joueur;
     private Animator animator;
@@ -35,7 +32,6 @@ public class EnemyAI : MonoBehaviour
 
         if (distance <= porteeDetection)
         {
-            // Pivote vers le joueur
             Vector3 direction = (joueur.position - transform.position).normalized;
             direction.y = 0;
             if (direction != Vector3.zero)
@@ -43,7 +39,6 @@ public class EnemyAI : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(direction);
             }
 
-            // À portée d'attaque : s'arrête et déclenche l'animation
             if (distance <= porteeAttaque)
             {
                 if (animator != null) animator.SetBool("isWalking", false);
@@ -54,7 +49,6 @@ public class EnemyAI : MonoBehaviour
                     prochainCoupTemps = Time.time + tempsEntreAttaques;
                 }
             }
-            // Sinon : avance vers le joueur
             else
             {
                 if (animator != null) animator.SetBool("isWalking", true);
@@ -74,10 +68,14 @@ public class EnemyAI : MonoBehaviour
             animator.SetTrigger("Attack");
         }
 
-        // Si tu as glissé un écran de défaite, il s'affiche quand l'ennemi frappe
-        if (ecranDefaiteUI != null)
+        // Cherche PlayerHealth sur le joueur ou ses parents
+        PlayerHealth sante = joueur.GetComponent<PlayerHealth>();
+        if (sante == null) sante = joueur.GetComponentInParent<PlayerHealth>();
+        if (sante == null) sante = joueur.GetComponentInChildren<PlayerHealth>();
+
+        if (sante != null)
         {
-            ecranDefaiteUI.SetActive(true);
+            sante.SubirDegats(degats);
         }
     }
 }
