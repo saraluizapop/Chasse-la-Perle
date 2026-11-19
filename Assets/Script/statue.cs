@@ -3,103 +3,129 @@ using UnityEngine;
 
 public class StatueExchange : MonoBehaviour
 {
-    [Header("Objet parent contenant les 6 nénuphars")]
-    public GameObject missingLilypadsGroup;
+    [Header("Configuration de l'échange")]
+    public int gemmesRequises = 3;
+    [Tooltip("Glisse ici l'objet parent Pont_Nenuphars contenant tes 6 nénuphars")]
+    public GameObject pontNenuphars;
 
-    [Header("Nombre de gemmes requises")]
-    public int requiredGems = 3;
+    [Header("Animation des nénuphars")]
+    public float dureeApparition = 0.6f;
+    public float delaiEntreNenuphars = 0.25f;
 
-    [Header("Paramètres d'apparition")]
-    [Tooltip("Temps que met chaque nénuphar à grandir")]
-    public float growDuration = 0.5f;
+    [Header("Dialogue du chat après l'échange")]
+    [TextArea(2, 4)]
+    public string[] messagesStatueActivee = new string[]
+    {
+        "Incroyable ! La statue a accepté les 3 gemmes !",
+        "Regarde, les nénuphars ont poussé ! Vite, traversons vers le Jardin secret !"
+    };
 
-    [Tooltip("Délai d'attente entre l'apparition de chaque nénuphar")]
-    public float delayBetweenLilypads = 0.25f;
-
-    [Header("Son d'apparition")]
+    [Header("Audio (Optionnel)")]
     public AudioSource audioSource;
-    public AudioClip sonApparitionNenuphar;
-    [Range(0f, 1f)]
-    public float volumeSon = 0.8f;
+    public AudioClip sonActivationStatue;
+    public AudioClip sonNenuphar;
 
-    private bool hasExchanged = false;
+    private bool dejaActivee = false;
+
+    void Start()
+    {
+        // Cache le groupe complet des 6 nénuphars au début
+        if (pontNenuphars != null)
+        {
+            pontNenuphars.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (hasExchanged) return;
+        if (dejaActivee) return;
 
         if (other.CompareTag("Player") || other.transform.root.CompareTag("Player"))
         {
-            Inventaire inventory = other.GetComponent<Inventaire>();
-            if (inventory == null)
-            {
-                inventory = other.GetComponentInParent<Inventaire>();
-            }
+            Inventaire inventaire = other.GetComponent<Inventaire>();
+            if (inventaire == null) inventaire = other.GetComponentInParent<Inventaire>();
 
-            if (inventory != null)
+            if (inventaire != null)
             {
-                if (inventory.gemCount >= requiredGems)
+                if (inventaire.gemCount >= gemmesRequises)
                 {
-                    inventory.gemCount -= requiredGems;
-                    hasExchanged = true;
-
-                    // Lance l'animation progressive avec son
-                    StartCoroutine(ApparitionProgressive());
+                    ActiverStatue(inventaire);
                 }
                 else
                 {
-                    int manque = requiredGems - inventory.gemCount;
-                    Debug.Log("Il te manque encore " + manque + " gemme(s) pour la statue !");
+                    CatGuide chat = FindFirstObjectByType<CatGuide>();
+                    if (chat != null)
+                    {
+                        int manquantes = gemmesRequises - inventaire.gemCount;
+                        chat.DonnerConseil("Il te manque encore " + manquantes + " gemme(s) pour réveiller la statue !");
+                    }
                 }
             }
         }
     }
 
-    private IEnumerator ApparitionProgressive()
+    private void ActiverStatue(Inventaire inventaire)
     {
-        if (missingLilypadsGroup == null) yield break;
+        dejaActivee = true;
 
-        Transform parentTransform = missingLilypadsGroup.transform;
-        int count = parentTransform.childCount;
-
-        Vector3[] originalScales = new Vector3[count];
-        for (int i = 0; i < count; i++)
+        inventaire.gemCount -= gemmesRequises;
+        if (inventaire.compteurTexte != null)
         {
-            Transform child = parentTransform.GetChild(i);
-            originalScales[i] = child.localScale;
-            child.localScale = Vector3.zero;
+            inventaire.compteurTexte.text = inventaire.gemCount + " / " + gemmesRequises;
         }
 
-        missingLilypadsGroup.SetActive(true);
+        if (audioSource != null && sonActivationStatue != null)
+        {
+            audioSource.PlayOneShot(sonActivationStatue);
+        }
+
+        StartCoroutine(FaireApparaitreGroupe());
+
+        CatGuide chat = FindFirstObjectByType<CatGuide>();
+        if (chat != null && messagesStatueActivee != null && messagesStatueActivee.Length > 0)
+        {
+            chat.DonnerSequenceConseils(messagesStatueActivee);
+        }
+    }
+
+    private IEnumerator FaireApparaitreGroupe()
+    {
+        if (pontNenuphars == null) yield break;
+
+        Transform parent = pontNenuphars.transform;
+        int count = parent.childCount;
+        Vector3[] taillesOriginales = new Vector3[count];
 
         for (int i = 0; i < count; i++)
         {
-            Transform child = parentTransform.GetChild(i);
-            Vector3 targetScale = originalScales[i];
+            Transform enfant = parent.GetChild(i);
+            taillesOriginales[i] = enfant.localScale;
+            enfant.localScale = Vector3.zero;
+        }
 
-            // Joue le bruit juste au moment où ce nénuphar commence à apparaître
-            if (audioSource != null && sonApparitionNenuphar != null)
+        pontNenuphars.SetActive(true);
+
+        for (int i = 0; i < count; i++)
+        {
+            Transform enfant = parent.GetChild(i);
+            Vector3 cible = taillesOriginales[i];
+
+            if (audioSource != null && sonNenuphar != null)
             {
-                // Optionnel : fait monter légèrement le pitch (la note) à chaque nénuphar (1.0 -> 1.3)
-                audioSource.pitch = 1.0f + (i * 0.06f);
-                audioSource.PlayOneShot(sonApparitionNenuphar, volumeSon);
+                audioSource.PlayOneShot(sonNenuphar);
             }
 
             float timer = 0f;
-            while (timer < growDuration)
+            while (timer < dureeApparition)
             {
                 timer += Time.deltaTime;
-                float progress = Mathf.Clamp01(timer / growDuration);
-                child.localScale = Vector3.Lerp(Vector3.zero, targetScale, Mathf.SmoothStep(0f, 1f, progress));
+                float progression = Mathf.SmoothStep(0f, 1f, timer / dureeApparition);
+                enfant.localScale = Vector3.Lerp(Vector3.zero, cible, progression);
                 yield return null;
             }
 
-            child.localScale = targetScale;
-
-            yield return new WaitForSeconds(delayBetweenLilypads);
+            enfant.localScale = cible;
+            yield return new WaitForSeconds(delaiEntreNenuphars);
         }
-
-        // Remet le pitch normal à la fin
-        if (audioSource != null) audioSource.pitch = 1.0f;
     }
 }

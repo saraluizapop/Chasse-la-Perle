@@ -28,7 +28,7 @@ public class CastleInteriorTrigger : MonoBehaviour
             CatGuide chat = Object.FindAnyObjectByType<CatGuide>();
             if (chat != null)
             {
-                chat.DonnerConseil("Attention Solange ! 3 gardes protègent la cage de Perle !");
+                chat.DonnerConseil("Attention ! 3 ÉchosS protègent la cage de Perle !");
             }
         }
     }

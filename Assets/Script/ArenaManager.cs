@@ -14,13 +14,13 @@ public class ArenaManager : MonoBehaviour
     public void MonstreMort()
     {
         monstresVaincus++;
-        Debug.Log("Monstres vaincus : " + monstresVaincus + " / " + totalMonstres);
+        Debug.Log("Monstres vaincus : " + monstresVaincus + "  " + totalMonstres);
 
         // Encouragement du chat
         CatGuide guide = Object.FindAnyObjectByType<CatGuide>();
         if (guide != null && monstresVaincus < totalMonstres)
         {
-            guide.DonnerConseil("Encore " + (totalMonstres - monstresVaincus) + " monstre(s) !");
+            guide.DonnerConseil("Encore " + (totalMonstres - monstresVaincus) + " Échos !");
         }
 
         // Victoire finale
@@ -47,7 +47,7 @@ public class ArenaManager : MonoBehaviour
         CatGuide guide = Object.FindAnyObjectByType<CatGuide>();
         if (guide != null)
         {
-            guide.DonnerConseil("Bravo Lyra ! Tu as vaincu les monstres et sauvé Perle !");
+            guide.DonnerConseil("Bravo! Tu as vaincu les Échos et sauvé Perle !");
         }
     }
 }

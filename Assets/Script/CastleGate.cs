@@ -25,7 +25,7 @@ public class CastleGateManager : MonoBehaviour
         CatGuide chat = FindFirstObjectByType<CatGuide>();
         if (chat != null && ennemisTues < ennemisRequis)
         {
-            chat.DonnerConseil("Encore " + (ennemisRequis - ennemisTues) + " ennemi(s) avant le château !");
+            chat.DonnerConseil("Encore " + (ennemisRequis - ennemisTues) + " Échos avant le château !");
         }
 
         if (ennemisTues >= ennemisRequis)
