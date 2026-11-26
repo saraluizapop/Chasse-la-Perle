@@ -17,7 +17,7 @@ public class StatueExchange : MonoBehaviour
     public string[] messagesStatueActivee = new string[]
     {
         "Incroyable ! La statue a accepté les 3 gemmes !",
-        "Regarde, les nénuphars ont poussé ! Vite, traversons vers le Jardin secret !"
+        "Un chemain de nénuphars est apparu sur le lac !"
     };
 
     [Header("Audio (Optionnel)")]
@@ -59,7 +59,7 @@ public class StatueExchange : MonoBehaviour
                     if (chat != null)
                     {
                         int manquantes = gemmesRequises - inventaire.gemCount;
-                        chat.DonnerConseil("Il te manque encore " + manquantes + " gemme(s) pour réveiller la statue !");
+                        chat.DonnerConseil("Il te manque encore " + manquantes + " gemmes !");
                     }
                 }
             }
